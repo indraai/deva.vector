@@ -5,8 +5,6 @@ import Deva from '@indra.ai/deva';
 import pkg from './package.json' with {type:'json'};
 const {agent,vars} = pkg.data;
 
-import {exec, spawn}  from 'node:child_process';
-
 // set the __dirname
 import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
@@ -37,46 +35,51 @@ const VECTOR = new Deva({
   },
   listeners: {
     'devacore:question'(packet) {
-      this.func.echo(packet.q);
+      console.log(packet);
+      this.func.echo('question', packet.q);
     },
     'devacore:answer'(packet) {
-      this.func.echo(packet.a);
+      this.func.echo('answer', packet.a);
     }
   },
   modules: {},
   devas: {},
   func: {
-    echo(opts) {
-      const {id, agent, client, md5, sha256, sha512} = opts;
+    echo(type, opts) {
+      const {id, agent, client, text, md5, sha256, sha512} = opts;
       const created = Date.now();
     
-      this.action('func', `echo:${id}`);
-      this.state('set', `echo:${id}`);
+      this.action('func', `echo:${type}:${id}`);
+      this.state('set', `echo:data:${type}:${id}`);
+      
       const echo_data = [
-        `::begin:guard:${id}`,
+        `\n::begin:vector:${type}:${id}`,
         `transport: ${id}`, 
-        `client: ${client.profile.id}`, 
-        `agent: ${agent.profile.id}`, 
         `created: ${created}`, 
+        `message: ${text}`,
+        `agent: ${this.lib.hash(agent, 'sha256')}`, 
+        `client: ${this.lib.hash(client, 'sha256')}`, 
         `md5: ${md5}`, 
         `sha256:${sha256}`, 
         `sha512:${sha512}`,
-        `::end:guard:${id}`,
+        `::end:vector:${type}:${id}`,
+        '::::',
       ].join('\n');
     
       // stub for later features right now just echo into the system process for SIGINT monitoring.
-      const echo = spawn('echo', [echo_data])
+      const echo = this.lib.spawn('echo', [echo_data])
       echo.stdout.on('data', data => {
-        this.state('data', `echo:stdout:${id}`);
+        console.log(data.toString());
+        this.state('data', `echo:stdout:${type}:${id}`);
       });
       echo.stderr.on('data', err => {
-        this.state('error', `echo:stderr:${id}`);
+        this.state('error', `echo:stderr:${type}:${id}`);
         this.error(err, opts);
       });
       echo.on('close', data => {
-        this.state('close', `echo:${id}`);        
+        this.state('close', `echo:close:${type}:${id}`);        
       });
-      this.state('return', `echo:${id}`);
+      this.state('return', `echo:return:${type}:${id}`);
       return echo_data;
     }    
   },
