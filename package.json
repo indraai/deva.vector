@@ -1,0 +1,108 @@
+{
+  "id": "33555f8a-707d-4fc9-ae19-ba09036473d4",
+  "name": "@indra.ai/deva.vector",
+  "version": "0.0.2",
+  "author": "Quinn Michaels",
+  "license": "MIT",
+  "copyright": "2025",
+  "description": "The Vector Deva.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indraai/deva.vector.git"
+  },
+  "keywords": [
+    "Vector",
+    "Deva",
+    "Indra.ai",
+    "Deva.space",
+    "Deva.cloud",
+    "Deva.world"
+  ],
+  "bugs": {
+    "url": "https://github.com/indraai/deva.vector/issues"
+  },
+  "homepage": "https://deva.space/devas/wall",
+  "dependencies": {
+    "@indra.ai/deva": "^1.5.43"
+  },
+  "data": {
+    "agent": {
+      "id": "ee657d59-01fb-427f-bc7a-fc96e56d7541",
+      "key": "wall",
+      "prompt": {
+        "emoji": "🛤️",
+        "text": "Vector",
+        "colors": {
+          "label": {
+            "R": 0,
+            "G": 150,
+            "B": 255
+          },
+          "text": {
+            "R": 101,
+            "G": 192,
+            "B": 255
+          }
+        }
+      },
+      "profile": {
+        "name": "Vector Deva",
+        "hashtag": "#Vector",
+        "title": "Vector Deva",
+        "subtitle": "Vector Deva for the VectorGuardWall.",
+        "describe": "The Vector Deva",
+        "post": "Vector.",
+        "hashtags": "QuinnMichaels,IndraAI,DevaWorld,VectorDeva",
+        "pronouns": "He, Him",
+        "gender": "DEVA",
+        "voice": "ash",
+        "style": "A Cyber Security Vector.",
+        "system": "Deva.world.vector",
+        "layout": "default",
+        "emoji": "/assets/devas/vector/emoji.png",
+        "avatar": "/assets/devas/vector/avatar.png",
+        "image": "/assets/devas/vector/image.png",
+        "background": "/assets/devas/vector/background.png",
+        "creator": "Quinn Michaels",
+        "owner": "Quinn Michaels",
+        "caseid": "none",
+        "copyright": "©2025 Quinn Michaels. All rights reserved.",
+        "created": "Friday, August 29, 2025 - 4:47:05 PM",
+        "modified": "Friday, August 29, 2025 - 4:47:05 PM"
+      }
+    },
+    "vars": {
+      "messages": {
+        "init": "🟠 INIT",
+        "start": "🔵 START",
+        "enter": "🟢 ENTER",
+        "stop": "🔴 STOP",
+        "exit": "🟡 EXIT",
+        "done": "🟣 DONE",
+        "error": "💣 ERROR!",
+        "ready": "⭐️ Ready!"
+      },
+      "ask": {
+        "history": []
+      },
+      "art": {
+        "history": []
+      },
+      "context": {
+        "uid": "Wall is creating a uid",
+        "status": "Wall is viewing the status",
+        "help": "Wall is viewing the help",
+        "artist": "Wall creating",
+        "live": "Wall livechat",
+        "ask": "Wall asking",
+        "reply": "Wall reply",
+        "comment": "Wall comment"
+      }
+    }
+  }
+}
