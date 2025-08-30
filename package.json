@@ -26,9 +26,9 @@
   "bugs": {
     "url": "https://github.com/indraai/deva.vector/issues"
   },
-  "homepage": "https://deva.space/devas/wall",
+  "homepage": "https://deva.space/devas/vector",
   "dependencies": {
-    "@indra.ai/deva": "^1.5.43"
+    "@indra.ai/deva": "^1.5.45"
   },
   "data": {
     "agent": {
@@ -94,14 +94,14 @@
         "history": []
       },
       "context": {
-        "uid": "Wall is creating a uid",
-        "status": "Wall is viewing the status",
-        "help": "Wall is viewing the help",
-        "artist": "Wall creating",
-        "live": "Wall livechat",
-        "ask": "Wall asking",
-        "reply": "Wall reply",
-        "comment": "Wall comment"
+        "uid": "Vector is creating a uid",
+        "status": "Vector is viewing the status",
+        "help": "Vector is viewing the help",
+        "artist": "Vector creating",
+        "live": "Vector livechat",
+        "ask": "Vector asking",
+        "reply": "Vector reply",
+        "comment": "Vector comment"
       }
     }
   }
