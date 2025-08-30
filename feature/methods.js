@@ -5,7 +5,7 @@ export default {
 		
 		this.zone('vector', transport); // set the current zone to guard
 		this.feature('vector', transport); // set the Guard feature.
-		this.context('proxy', transport); // set the agent context to proxy.
+		this.context('vector', transport); // set the agent context to proxy.
 		this.action('method', `proxy:${transport}`); // set the action method to proxy.
 		
 		this.state('set', `uid:${transport}`); //set the uid state for the proxy
@@ -65,8 +65,8 @@ export default {
 			message,
 			caseid: client.profile.caseid,
 			opts: opts.length? `:${opts.join(':')}` : '',
-			agent: agent_profile,
-			client: client_profile,
+			agent: agent_hash,
+			client: client_hash,
 			name: client.profile.name,
 			emojis: client.profile.emojis,
 			company: client.profile.company,
@@ -80,30 +80,30 @@ export default {
 			copyright: client.profile.copyright,
 		};
 		
-		this.state('hash', `md5:${transport}`); // set state to secure hashing
+		this.state('hash', `vector:md5:${transport}`); // set state to secure hashing
 		data.md5 = this.lib.hash(data, 'md5'); // hash data packet into md5 and inert into data.
 		
-		this.state('hash', `sha256:${transport}`); // set state to secure hashing
+		this.state('hash', `vector:sha256:${transport}`); // set state to secure hashing
 		data.sha256 = this.lib.hash(data, 'sha256'); // hash data into sha 256 then set in data.
 		
-		this.state('hash', `sha512:${transport}`); // set state to secure hashing
+		this.state('hash', `vector:sha512:${transport}`); // set state to secure hashing
 		data.sha512 = this.lib.hash(data, 'sha512'); // hash data into sha 512 then set in data.
 		
 		// Text data that is joined by line breaks and then trimmed.
-		this.state('set', `text:${transport}`); // set state to text for output formatting.
+		this.state('set', `vector:text:${transport}`); // set state to text for output formatting.
 		const text = [
-			`:::`,
+			`::::`,
 			`::BEGIN:${data.write}:${data.transport}`,
-			`#VectorGuardProxy${data.opts} ${data.message}`,
+			`#Vector${data.opts} ${data.message}`,
 			`::begin:vector:guard:proxy:${transport}:${data.emojis}`,
 			`transport: ${data.transport}`,
 			`time: ${data.time}`,
 			`caseid: ${data.caseid}`,
 			`agent: ${data.agent}`,
 			`client: ${data.client}`,
+			`token: ${data.token}`,
 			`name: ${data.name}`,
 			`company: ${data.company}`,
-			`token: ${data.token}`,
 			`warning: ${data.warning}`,
 			`created: ${data.created}`,
 			`copyright: ${data.copyright}`,
@@ -112,17 +112,64 @@ export default {
 			`sha512: ${data.sha512}`,
 			`::end:vector:guard:proxy:${data.transport}:${data.emojis}`,
 			`::END:${data.write}:${data.transport}`,
+			`::::`
 		].join('\n').trim();
 		
 		// send the text data to #feecting to parse and return valid text, html, and data.
-		this.action('question', `feecting:parse:${transport}`); // action set to feecting parse 
+		this.action('question', `vector:feecting:parse:${transport}`); // action set to feecting parse 
 		const feecting = await this.question(`${this.askChr}feecting parse:${transport} ${text}`); // parse with feecting agent.
 		
-		this.state('return', `proxy:${transport}`); // set the state to return proxy
+		this.state('return', `vector:${transport}`); // set the state to return proxy
 		return {
 			text: feecting.a.text,
 			html: feecting.a.html,
 			data,
 		}	  
 	},
+	echo(key, type, opts) {
+		const {id, agent, client, text, created, md5, sha256, sha512} = opts;
+
+		this.prompt('ECHO ECHO ECHO')
+		this.state('set', `${key}:echo:${type}:time:${id}`);
+		const echo_time = Date.now();
+
+		this.action('func', `${key}:echo:${type}:${id}`);
+		
+		this.state('set', `${key}:echo:${type}:keystr:${id}`);
+		const keystr = `${key.toUpperCase()}:${type.toUpperCase()}:${id}`;
+
+		this.state('set', `${key}:echo:${type}:data:${id}`);
+		const echo_data = [
+			`::::`
+			`::BEGIN:${keystr}`,
+			`key: ${key}`, 
+			`type: ${type}`, 
+			`transport: ${id}`, 
+			`created: ${created}`,
+			`echo: ${echo_time}`,
+			`message: ${text}`,
+			`agent: ${this.lib.hash(agent, 'sha256')}`, 
+			`client: ${this.lib.hash(client, 'sha256')}`, 
+			`md5: ${md5}`, 
+			`sha256:${sha256}`, 
+			`sha512:${sha512}`,
+			`::END:${keystr}`,
+			'::::',
+		].join('\n');
+		
+		// stub for later features right now just echo into the system process for SIGINT monitoring.
+		const echo = this.lib.spawn('echo', [echo_data])
+		echo.stdout.on('data', data => {
+			this.state('data', `${key}:echo:${type}:stdout:${id}`);
+		});
+		echo.stderr.on('data', err => {
+			this.state('error', `${key}:echo:${type}:stderr:${id}`);
+			this.error(err, opts);
+		});
+		echo.on('close', data => {
+			this.state('close', `${key}:echo:${type}:close:${id}`);        
+		});
+		this.state('return', `${key}:echo:${type}:return:${id}`);
+		return echo_data;
+	}    
 };

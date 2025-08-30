@@ -35,54 +35,15 @@ const VECTOR = new Deva({
   },
   listeners: {
     'devacore:question'(packet) {
-      console.log(packet);
-      this.func.echo('question', packet.q);
+      const echo = this.methods.echo('vector', 'question', packet.q);
     },
     'devacore:answer'(packet) {
-      this.func.echo('answer', packet.a);
+      const echo = this.methods.echo('vector', 'answer', packet.a);
     }
   },
   modules: {},
   devas: {},
-  func: {
-    echo(type, opts) {
-      const {id, agent, client, text, md5, sha256, sha512} = opts;
-      const created = Date.now();
-    
-      this.action('func', `echo:${type}:${id}`);
-      this.state('set', `echo:data:${type}:${id}`);
-      
-      const echo_data = [
-        `\n::begin:vector:${type}:${id}`,
-        `transport: ${id}`, 
-        `created: ${created}`, 
-        `message: ${text}`,
-        `agent: ${this.lib.hash(agent, 'sha256')}`, 
-        `client: ${this.lib.hash(client, 'sha256')}`, 
-        `md5: ${md5}`, 
-        `sha256:${sha256}`, 
-        `sha512:${sha512}`,
-        `::end:vector:${type}:${id}`,
-        '::::',
-      ].join('\n');
-    
-      // stub for later features right now just echo into the system process for SIGINT monitoring.
-      const echo = this.lib.spawn('echo', [echo_data])
-      echo.stdout.on('data', data => {
-        console.log(data.toString());
-        this.state('data', `echo:stdout:${type}:${id}`);
-      });
-      echo.stderr.on('data', err => {
-        this.state('error', `echo:stderr:${type}:${id}`);
-        this.error(err, opts);
-      });
-      echo.on('close', data => {
-        this.state('close', `echo:close:${type}:${id}`);        
-      });
-      this.state('return', `echo:return:${type}:${id}`);
-      return echo_data;
-    }    
-  },
+  func: {},
   methods: {},
   onReady(data, resolve) {
     this.prompt(this.vars.messages.ready);
