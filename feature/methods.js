@@ -8,8 +8,6 @@ export default {
 		this.state('set', `${key}:sign:${type}:${packet.id}`);
 		const transport = packet.id; // set the transport id from the packet id.
 
-		this.prompt(`sign ${key}`);
-
 		this.zone(key, `${key}:sign:${type}:${transport}`); // set the zone
 		this.feature(key, `${key}:sign:${type}:${transport}`); // set the feature
 		this.context(key, `${key}:sign:${type}:${transport}`); // set the agent context to proxy.
@@ -76,8 +74,10 @@ export default {
 			agent: agent_hash,
 			client: client_hash,
 			name: client.profile.name,
+			name: client.profile.fullname,
 			emojis: client.profile.emojis,
 			company: client.profile.company,
+			law: client.profile.law,
 			warning: client.profile.warning,
 			token,
 			concerns,
@@ -111,7 +111,9 @@ export default {
 			`client: ${data.client}`,
 			`token: ${data.token}`,
 			`name: ${data.name}`,
+			`fullname: ${data.fullanme}`,
 			`company: ${data.company}`,
+			`law: ${data.law}`,
 			`warning: ${data.warning}`,
 			`created: ${data.created}`,
 			`copyright: ${data.copyright}`,
