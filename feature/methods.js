@@ -50,16 +50,25 @@ export default {
 		const write = `OM:${key.toUpperCase()}:${client.profile.write.split(' ').join(':').toUpperCase()}`; // set proxy write string.
 		
 		// hash the agent profile for security
-		this.state('hash', `${key}:sign:${type}:write:${transport}`);
+		this.state('hash', `${key}:sign:${type}:packet:sha256:${transport}`);
+		const packet_hash = this.lib.hash(packet, 'sha256');
+
+		// hash the agent profile for security
+		this.state('hash', `${key}:sign:${type}:agent:sha256:${transport}`);
 		const agent_hash = this.lib.hash(agent, 'sha256');
 		
 		// hash the agent profile for security
-		this.state('hash', `${key}:sign:${type}:write:${transport}`);
+		this.state('hash', `${key}:sign:${type}:client:sha256:${transport}`);
 		const client_hash = this.lib.hash(client, 'sha256');
+
+		// hash the agent profile for security
+		this.state('hash', `${key}:sign:${type}:laws:sha256:${transport}`);
+		const laws_hash = this.lib.hash(client.profile.laws, 'sha256');
 		
 		// hash the agent profile for security
-		this.state('hash', `${key}:sign:${type}:write:${transport}`);
+		this.state('hash', `${key}:sign:${type}:token:${transport}`);
 		const token = this.lib.hash(`${key} ${client.profile.token} ${transport}`, 'sha256');
+
 		
 		this.state('set', `${key}:sign:${type}:write:${transport}`); // set the state to set data 
 		// data packet
@@ -71,13 +80,15 @@ export default {
 			message,
 			caseid: client.profile.caseid,
 			opts: opts.length? `:${opts.join(':')}` : '',
-			agent: agent_hash,
-			client: client_hash,
 			name: client.profile.name,
-			name: client.profile.fullname,
+			fullname: client.profile.fullname,
+			birthname: client.profile.birthname,
 			emojis: client.profile.emojis,
 			company: client.profile.company,
-			law: client.profile.law,
+			client: client_hash,
+			agent: agent_hash,
+			packet: packet_hash,
+			laws: laws_hash,
 			warning: client.profile.warning,
 			token,
 			concerns,
@@ -102,25 +113,32 @@ export default {
 		const text = [
 			`::::`,
 			`::BEGIN:${data.write}:${data.transport}`,
-			`#${key}:${type}${data.opts} ${data.message}`,
-			`::begin:${key}:${transport}:${data.emojis}`,
+			`write #${key}:${type}${data.opts} ${data.message}`,
+			'\n---\n',
+			'Signed',
+			data.fullname,
+			data.emojis,
+			'\n',
+			`::begin:${key}:${type}:${transport}`,
 			`transport: ${data.transport}`,
 			`time: ${data.time}`,
+			`name: ${data.name}`,
+			`fullname: ${data.fullname}`,
+			`birthname: ${data.birthname}`,
+			`company: ${data.company}`,
 			`caseid: ${data.caseid}`,
 			`agent: ${data.agent}`,
 			`client: ${data.client}`,
+			`packet: ${data.packet}`,
 			`token: ${data.token}`,
-			`name: ${data.name}`,
-			`fullname: ${data.fullanme}`,
-			`company: ${data.company}`,
-			`law: ${data.law}`,
+			`laws: ${data.laws}`,
 			`warning: ${data.warning}`,
 			`created: ${data.created}`,
 			`copyright: ${data.copyright}`,
 			`md5: ${data.md5}`,
 			`sha256: ${data.sha256}`,
 			`sha512: ${data.sha512}`,
-			`::end:${key}:${type}${data.transport}:${data.emojis}`,
+			`::end:${key}:${type}${data.transport}`,
 			`::END:${data.write}:${data.transport}`,
 			`::::`
 		].join('\n').trim();
@@ -138,8 +156,9 @@ export default {
 		
 	},
 	
-	async echo(key, type, opts) {
-		const {id, agent, client, text, created, md5, sha256, sha512} = opts;
+	async echo(key, type, packet) {
+		
+		const {id, agent, client, text, created, md5, sha256, sha512} = packet[type];
 
 		this.state('set', `${key}:echo:${type}:time:${id}`);
 		const echo_time = Date.now();
@@ -148,6 +167,10 @@ export default {
 		
 		this.state('hash', `${key}:echo:${type}:hash:message:${id}`);
 		const message_hash = this.lib.hash(text || 'blank', 'sha256');
+
+		// hash the agent profile for security
+		this.state('hash', `${key}:echo:${type}:packet:sha256:${id}`);
+		const packet_hash = this.lib.hash(packet, 'sha256');
 
 		this.state('hash', `${key}:echo:${type}:hash:agent:${id}`);
 		const agent_hash = this.lib.hash(agent, 'sha256');
@@ -170,6 +193,7 @@ export default {
 			`message: ${message_hash}`,
 			`agent: ${agent_hash}`, 
 			`client: ${client_hash}`, 
+			`packet: ${packet_hash}`, 
 			`md5: ${md5}`, 
 			`sha256:${sha256}`, 
 			`sha512:${sha512}`,
