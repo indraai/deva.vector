@@ -63,7 +63,7 @@ export default {
 
 		// hash the agent profile for security
 		this.state('hash', `${key}:sign:${type}:laws:sha256:${transport}`);
-		const laws_hash = this.lib.hash(client.profile.laws, 'sha256');
+		const laws_hash = this.lib.hash(agent.laws || client.laws, 'sha256');
 		
 		// hash the agent profile for security
 		this.state('hash', `${key}:sign:${type}:token:${transport}`);
@@ -89,7 +89,7 @@ export default {
 			agent: agent_hash,
 			packet: packet_hash,
 			laws: laws_hash,
-			warning: client.profile.warning,
+			warning: agent.warning || client.warning || 'none',
 			token,
 			concerns,
 			meta,
