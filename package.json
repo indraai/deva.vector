@@ -34,6 +34,7 @@
     "agent": {
       "id": "ee657d59-01fb-427f-bc7a-fc96e56d7541",
       "key": "vector",
+      "expires": 60000,
       "prompt": {
         "emoji": "🛤️",
         "text": "Vector",

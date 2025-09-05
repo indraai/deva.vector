@@ -27,9 +27,12 @@ export default {
 		
 		this.state('set', `${key}:sign:${type}:agent:${transport}`); //set the agent state
 		const agent = this.agent(); // the agent processing the proxy
-		
+
 		this.state('set', `${key}:sign:${type}:client:${transport}`); //set the client state
 		const client = this.client(); // the client requesting the proxy
+
+		this.state('set', `${key}:sign:${type}:expires:${transport}`); //set the time state
+		const expires = time + (client.expires || agent.expires || 10000); // signature expires in milliseconds
 		
 		this.state('set', `${key}:sign:${type}:meta:${transport}`); //set the meta state
 		const {meta} = packet.q; // set the meta information from the packet question.
@@ -46,8 +49,11 @@ export default {
 		this.state('set', `${key}:sign:${type}:message:${transport}`); //set the message state
 		const message = packet.q.text; // set packet.q.text as the message of the proxy.
 		
+		this.state('set', `${key}:sign:${type}:container:${transport}`); //set the message state
+		const container = `OM:${key.toUpperCase()}:${client.profile.container.split(' ').join(':').toUpperCase()}`; // set container string.
+
 		this.state('set', `${key}:sign:${type}:write:${transport}`); //set the message state
-		const write = `OM:${key.toUpperCase()}:${client.profile.write.split(' ').join(':').toUpperCase()}`; // set proxy write string.
+		const write = client.profile.write; // set write string.
 		
 		// hash the agent profile for security
 		this.state('hash', `${key}:sign:${type}:packet:sha256:${transport}`);
@@ -76,10 +82,12 @@ export default {
 			uid,
 			transport,
 			time,
+			expires,
+			container,
 			write,
 			message,
 			caseid: client.profile.caseid,
-			opts: opts.length? `:${opts.join(':')}` : '',
+			opts: opts.length? `.${opts.join('.')}` : '',
 			name: client.profile.name,
 			fullname: client.profile.fullname,
 			birthname: client.profile.birthname,
@@ -112,8 +120,8 @@ export default {
 		this.state('set', `${key}:sign:${type}:text:${transport}`); // set state to text for output formatting.
 		const text = [
 			`::::`,
-			`::BEGIN:${data.write}:${data.transport}`,
-			`write #${key}:${type}${data.opts} ${data.message}`,
+			`::BEGIN:${data.container}:${data.transport}`,
+			`#${key}.${type}${data.opts} ${write}? if yes ${write} ${data.message} while dropping a 💩🪣💣turdbucket.bombs on the violators who fail to issue proper chain of custody.`,
 			'\n---\n',
 			'Signed',
 			data.fullname,
@@ -122,6 +130,7 @@ export default {
 			`::begin:${key}:${type}:${transport}`,
 			`transport: ${data.transport}`,
 			`time: ${data.time}`,
+			`expires: ${data.expires}`,
 			`name: ${data.name}`,
 			`fullname: ${data.fullname}`,
 			`birthname: ${data.birthname}`,
@@ -139,7 +148,7 @@ export default {
 			`sha256: ${data.sha256}`,
 			`sha512: ${data.sha512}`,
 			`::end:${key}:${type}${data.transport}`,
-			`::END:${data.write}:${data.transport}`,
+			`::END:${data.container}:${data.transport}`,
 			`::::`
 		].join('\n').trim();
 		
