@@ -1,7 +1,7 @@
 {
   "id": "33555f8a-707d-4fc9-ae19-ba09036473d4",
   "name": "@indra.ai/deva.vector",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "author": "Quinn Michaels",
   "license": "MIT",
   "copyright": "2025",
@@ -105,7 +105,7 @@
       }
     },
     "laws": [
-      "The Prudent finds it easy to distinguish the True and False. Their words oppose each other. Of these two that which is True and Honest is Protected whlie bringing the False to Nothing. Never Aid and Guide the Wicked or those who Falsely claims the Warrior's Title."      
+      "The Prudent finds it easy to distinguish the True and False. Their words oppose each other. Of these two that which is True and Honest is Protected whlie bringing the False to Nothing. Never Aid and Guide the Wicked or those who Falsely claims the Warrior's Title."
     ]
   }
 }
