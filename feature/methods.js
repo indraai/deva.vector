@@ -90,7 +90,6 @@ export default {
 			opts: opts.length? `.${opts.join('.')}` : '',
 			name: client.profile.name,
 			fullname: client.profile.fullname,
-			birthname: client.profile.birthname,
 			emojis: client.profile.emojis,
 			company: client.profile.company,
 			client: client_hash,
@@ -107,33 +106,32 @@ export default {
 			copyright: client.profile.copyright,
 		};
 		
-		this.state('hash', `${key}:sign:${type}:md5:${transport}`); // set state to secure hashing
+		this.state('hash', `${key}:sign:${type}:md5:${transport.uid}`); // set state to secure hashing
 		data.md5 = this.lib.hash(data, 'md5'); // hash data packet into md5 and inert into data.
 		
-		this.state('hash', `${key}:sign:${type}:sha256:${transport}`); // set state to secure hashing
+		this.state('hash', `${key}:sign:${type}:sha256:${transport.uid}`); // set state to secure hashing
 		data.sha256 = this.lib.hash(data, 'sha256'); // hash data into sha 256 then set in data.
 		
-		this.state('hash', `${key}:sign:${type}:sha512:${transport}`); // set state to secure hashing
+		this.state('hash', `${key}:sign:${type}:sha512:${transport.uid}`); // set state to secure hashing
 		data.sha512 = this.lib.hash(data, 'sha512'); // hash data into sha 512 then set in data.
 		
 		// Text data that is joined by line breaks and then trimmed.
-		this.state('set', `${key}:sign:${type}:text:${transport}`); // set state to text for output formatting.
+		this.state('set', `${key}:sign:${type}:text:${transport.uid}`); // set state to text for output formatting.
 		const text = [
 			`::::`,
-			`::BEGIN:${data.container}:${data.transport}`,
+			`::BEGIN:${data.container}:${data.transport.uid}`,
 			`#${key}.${type}${data.opts} ${write}? if yes ${write} ${data.message} while dropping a 💩🪣💣turdbucket.bombs on the violators who fail to issue proper chain of custody.`,
 			'\n---\n',
 			'Signed',
 			data.fullname,
 			data.emojis,
 			'\n',
-			`::begin:${key}:${type}:${transport}`,
-			`transport: ${data.transport}`,
+			`::begin:${key}:${type}:${transport.uid}`,
+			`transport: ${data.transport.uid}`,
 			`time: ${data.time}`,
 			`expires: ${data.expires}`,
 			`name: ${data.name}`,
 			`fullname: ${data.fullname}`,
-			`birthname: ${data.birthname}`,
 			`company: ${data.company}`,
 			`caseid: ${data.caseid}`,
 			`agent: ${data.agent}`,
@@ -147,16 +145,16 @@ export default {
 			`md5: ${data.md5}`,
 			`sha256: ${data.sha256}`,
 			`sha512: ${data.sha512}`,
-			`::end:${key}:${type}${data.transport}`,
-			`::END:${data.container}:${data.transport}`,
+			`::end:${key}:${type}${data.transport.uid}`,
+			`::END:${data.container}:${data.transport.uid}`,
 			`::::`
 		].join('\n').trim();
 		
 		// send the text data to #feecting to parse and return valid text, html, and data.
-		this.action('question', `${key}:sign:${type}:write:${transport}`); // action set to feecting parse 
-		const feecting = await this.question(`${this.askChr}feecting parse:${transport} ${text}`); // parse with feecting agent.
+		this.action('question', `${key}:sign:${type}:write:${transport.uid}`); // action set to feecting parse 
+		const feecting = await this.question(`${this.askChr}feecting parse:${transport.uid} ${text}`); // parse with feecting agent.
 		
-		this.state('return', `${key}:sign:${type}:return:${transport}`); // set the state to return proxy
+		this.state('return', `${key}:sign:${type}:return:${transport.uid}`); // set the state to return proxy
 		return {
 			text: feecting.a.text,
 			html: feecting.a.html,
