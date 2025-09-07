@@ -35,10 +35,10 @@ const VECTOR = new Deva({
   },
   listeners: {
     'devacore:question'(packet) {
-      const echo = this.methods.echo('vector', 'q', packet);
+      this.methods.echo(agent.key, 'q', packet);
     },
     'devacore:answer'(packet) {
-      const echo = this.methods.echo('vector', 'a', packet);
+      this.methods.echo(agent.key, 'a', packet);
     }
   },
   modules: {},
