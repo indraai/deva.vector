@@ -1,10 +1,24 @@
 {
-  "id": "33555f8a-707d-4fc9-ae19-ba09036473d4",
+  "id": "47853658710534513323",
   "name": "@indra.ai/deva.vector",
   "version": "0.0.21",
-  "author": "Quinn Michaels",
-  "license": "MIT",
-  "copyright": "2025",
+  "license": "VLA:55542255017902542863 LICENSE.md",
+  "author": {
+    "name": "Quinn A Michaels",
+    "email": "quinn@indra.ai",
+    "url": "https://indra.ai/"
+  },
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/rahulaclub"
+    },
+    {
+      "type": "patreon",
+      "url": "https://patreon.com/rahulaclub"
+    }
+  ],
+  "copyright": "(c)2025, Quinn A Michaels; All Rights Reserved.",
   "description": "The Vector Deva.",
   "main": "index.js",
   "type": "module",
@@ -32,7 +46,7 @@
   },
   "data": {
     "agent": {
-      "id": "ee657d59-01fb-427f-bc7a-fc96e56d7541",
+      "id": "49992571567879423733",
       "key": "vector",
       "expires": 60000,
       "prompt": {
