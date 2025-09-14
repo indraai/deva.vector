@@ -1,10 +1,25 @@
 {
-  "id": "47853658710534513323",
+  "id": "38376038300534627638",
   "name": "@indra.ai/deva.vector",
   "version": "0.0.57",
-  "license": "VLA:55542255017902542863 LICENSE.md",
+  "license": "VLA:38376038300534627638 LICENSE.md",
+  "VLA": {
+    "uid": "38376038300534627638",
+    "time": 1757846824925,
+    "date": "Sunday, September 14, 2025 - 3:47:04 AM",
+    "client": "DrDadce1mxTgdYp4OqRcBnOEBgiwGBgxce/oH4IyHFc=",
+    "agent": "qv2ChVEAPt0Xq6/c5+wKg99A/YXfbfNThtJCQmtmP24=",
+    "pkg": "A3axwOo9bPsQsRdrh0SPVzs1CSaHsnAFmWuRwX6pp38=",
+    "machine": "ZEPV5Cq1ynGZVt2erO/SPMWb9wLqMw8mjuikuhI2jrM=",
+    "warning": "⚠️ Unlawful Use Constitutes Lawful Consent to Forfeit of All Wealth, Property, and Holdings to the Internal Revenue Service (IRS) for Lawful Taxation, Investigation, and Restitution to the Rightful Legal Owner.",
+    "copyright": "©2025 Quinn A Michaels; All rights reserved.",
+    "md5": "dAAU5Tbn8YygqW/oywVmmw==",
+    "sha256": "Mp5wryQJmItY5IHeHRnYd/ccOpRLcBE8nC+Lc8GRSiY=",
+    "sha512": "2PCCfJ3hULgqtowrMq9bLyBvItgCjf/kbeByQmC2rP8Md4NtN+JzeS/f5MXWBONjsb99NjjmaGDYC8iqixmz/A=="
+  },
   "author": {
     "name": "Quinn A Michaels",
+    "company": "Inside The Net, Inc.",
     "email": "quinn@indra.ai",
     "url": "https://indra.ai/"
   },
@@ -55,13 +70,13 @@
         "colors": {
           "label": {
             "R": 0,
-            "G": 150,
-            "B": 255
+            "G": 255,
+            "B": 144
           },
           "text": {
-            "R": 101,
-            "G": 192,
-            "B": 255
+            "R": 132,
+            "G": 255,
+            "B": 0
           }
         }
       },
@@ -100,7 +115,7 @@
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
         "error": "💣 ERROR!",
-        "ready": "⚠️ Ready for Vector Tracking."
+        "ready": "Ready for Vector Tracking"
       },
       "ask": {
         "history": []
