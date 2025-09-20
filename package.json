@@ -66,7 +66,7 @@
       "expires": 60000,
       "prompt": {
         "emoji": "🛤️",
-        "text": "Vector",
+        "text": "#vector",
         "colors": {
           "label": {
             "R": 0,
@@ -115,7 +115,7 @@
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
         "error": "💣 ERROR!",
-        "ready": "Ready for Vector Tracking"
+        "ready": "✅ Vector Deva Ready"
       },
       "ask": {
         "history": []
