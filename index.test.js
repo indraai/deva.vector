@@ -1,22 +1,22 @@
 "use strict";
-// ©2025 Quinn A Michaels; All rights reserved. 
+// Copyright ©2025 Quinn A Michaels; All rights reserved. 
 // Legal Signature Required For Lawful Use.
-// Distributed under VLA:38376038300534627638 LICENSE.md
-// Indra Deva test file
+// Distributed under VLA:31941953695116752336 LICENSE.md
+// Vector  Deva test file
 
 const {expect} = require('chai')
-const :key: = require('./index.js');
+const vector = require('./index.js');
 
 describe(indra.me.name, () => {
   beforeEach(() => {
-    return indra.init()
+    return vector.init()
   });
   it('Check the DEVA Object', () => {
-    expect(indra).to.be.an('object');
-    expect(indra).to.have.property('agent');
-    expect(indra).to.have.property('vars');
-    expect(indra).to.have.property('listeners');
-    expect(indra).to.have.property('methods');
-    expect(indra).to.have.property('modules');
+    expect(vector).to.be.an('object');
+    expect(vector).to.have.property('agent');
+    expect(vector).to.have.property('vars');
+    expect(vector).to.have.property('listeners');
+    expect(vector).to.have.property('methods');
+    expect(vector).to.have.property('modules');
   });
 })
