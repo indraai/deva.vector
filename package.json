@@ -57,7 +57,7 @@
   },
   "homepage": "https://deva.space/devas/vector",
   "dependencies": {
-    "@indra.ai/deva": "^1.7.2"
+    "@indra.ai/deva": "^1.8.4"
   },
   "data": {
     "agent": {
