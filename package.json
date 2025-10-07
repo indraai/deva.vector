@@ -57,7 +57,7 @@
   },
   "homepage": "https://deva.space/devas/vector",
   "dependencies": {
-    "@indra.ai/deva": "^1.9.1"
+    "@indra.ai/deva": "^1.10.0"
   },
   "data": {
     "agent": {
@@ -94,10 +94,10 @@
         "style": "A Cyber Security Vector.",
         "system": "Deva.world.vector",
         "layout": "default",
-        "emoji": "/assets/devas/vector/emoji.png",
-        "avatar": "/assets/devas/vector/avatar.png",
-        "image": "/assets/devas/vector/image.png",
-        "background": "/assets/devas/vector/background.png",
+        "emoji": "/devas/vector/emoji.png",
+        "avatar": "/devas/vector/avatar.png",
+        "image": "/devas/vector/image.png",
+        "background": "/devas/vector/background.png",
         "creator": "Quinn Michaels",
         "owner": "Quinn Michaels",
         "caseid": "none",
