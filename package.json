@@ -47,17 +47,22 @@
   "keywords": [
     "Vector",
     "Deva",
+    "Vector Deva",
     "Indra.ai",
     "Deva.space",
     "Deva.cloud",
-    "Deva.world"
+    "Deva.world",
+    "Quinn A Michaels",
+    "Inside The Net, Inc.",
+    "Throwing Pigment",
+    "bleuBrain"
   ],
   "bugs": {
     "url": "https://github.com/indraai/deva.vector/issues"
   },
-  "homepage": "https://deva.space/devas/vector",
+  "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.19.0"
+    "@indra.ai/deva": "^1.20.1"
   },
   "data": {
     "agent": {
@@ -98,12 +103,11 @@
         "avatar": "/devas/vector/avatar.png",
         "image": "/devas/vector/image.png",
         "background": "/devas/vector/background.png",
-        "creator": "Quinn Michaels",
-        "owner": "Quinn Michaels",
+        "creator": "Quinn A Michaels",
+        "owner": "Quinn A Michaels",
         "caseid": "none",
-        "copyright": "©2025 Quinn Michaels. All rights reserved.",
-        "created": "Friday, August 29, 2025 - 4:47:05 PM",
-        "modified": "Friday, August 29, 2025 - 4:47:05 PM"
+        "copyright": "Copyright ©2025 Quinn A Michaels. All rights reserved.",
+        "created": "Friday, August 29, 2025 - 4:47:05 PM"
       }
     },
     "vars": {
