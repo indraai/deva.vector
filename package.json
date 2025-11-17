@@ -54,7 +54,7 @@
     "Deva.world",
     "Quinn A Michaels",
     "Inside The Net, Inc.",
-    "Throwing Pigment",
+    "Throwing Pigment™",
     "bleuBrain"
   ],
   "bugs": {
@@ -62,7 +62,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.22.1"
+    "@indra.ai/deva": "^1.23.0"
   },
   "data": {
     "agent": {
@@ -105,7 +105,7 @@
         "background": "/devas/vector/background.png",
         "creator": "Quinn A Michaels",
         "owner": "Quinn A Michaels",
-        "caseid": "none",
+        "warning": "⚠️ These eight qualities glorify a man wisdom, high birth, self-restraint, learning, prowess, moderation in speech, gift according to one's power, and gratitude. This house hath nine doors, three pillars, and five witnesses. It is presided over by the soul. That learned man who knoweth all this is truly wise. He who never boastfully striveth to attain the three objects of human pursuit, who when asked, telleth the truth, who quarreleth not even for the sake of friends, and who never becometh angry though slighted, is reckoned as wise. The intelligent man who relinquisheth pride, folly, insolence, sinful acts, disloyalty, crookedness of behaviour, enmity with many, and also quarrels with men that are drunk, mad and wicked, is the foremost of his species. ",
         "copyright": "Copyright ©2025 Quinn A Michaels. All rights reserved.",
         "created": "Friday, August 29, 2025 - 4:47:05 PM"
       }
