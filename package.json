@@ -62,7 +62,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.26.0"
+    "@indra.ai/deva": "^1.29.1"
   },
   "data": {
     "agent": {
@@ -119,7 +119,7 @@
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
         "error": "💣 ERROR!",
-        "ready": "✅ Vector Deva Ready"
+        "ready": "🔐 Vector Deva Ready"
       },
       "ask": {
         "history": []
