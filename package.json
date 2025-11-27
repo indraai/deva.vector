@@ -1,21 +1,16 @@
 {
-  "id": "31941953695116752336",
+  "id": "68835997272564084323",
   "name": "@indra.ai/deva.vector",
   "version": "0.8.1",
-  "license": "VLA:31941953695116752336 LICENSE.md",
+  "license": "VLA:68835997272564084323 LICENSE.md",
   "VLA": {
-    "uid": "31941953695116752336",
-    "time": 1758412662934,
-    "date": "Saturday, September 20, 2025 - 4:57:42 PM",
-    "client": "1UM4AH+/jOGgpaHNqX6lTZsGrNglNogzMx4qDT0O0zs=",
-    "agent": "+u0j+HegQ78YSN21s/E6wq6LqK6c7k0f0lI9/kurHXA=",
-    "core": "qQRVFQmv3LfY6tcqrEQeM7ZodOpnOUC+PJyfjxtgeVc=",
-    "machine": "XNr6z6wCz2ZrQJPT1VHzqJuotI1pxib+YFrsYmsADiw=",
-    "warning": "⚠️ Vedic Law Sâhasa/Theft/Crime of the highest degree, a fine amounting to no less than a thousand Panas (1 pana = 3.5 grams of gold) is ordained owed to Quinn A Michaels. Moreover corporal punishment and confiscation of the entire property forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
-    "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
-    "md5": "GEAtdPrXAJbVCcq2G4VPoA==",
-    "sha256": "31gaB1MkxYkqNpETbF4bS28FtpB3Qdi5/TUoJqKSZ18=",
-    "sha512": "2ub/Q3Q25onpeJbiOi1W//H3DaU+Ea68/BuVYAez17FhuWvB+mdQJe4Q2Mu/adO7aw1cSE+2nspHHCNHLEVXCw=="
+    "uid": "68835997272564084323",
+    "time": 1764206377047,
+    "date": "Wednesday, November 26, 2025 - 5:19:37 PM",
+    "warning": "⚠️ Unlawful use or duplication of this uid constitutes Vedic Sâhasa a crime of the highest degree. A fine amounting to a thousand Panas (1 pana = 3.5 grams of gold) for each instance is ordained, and confiscation of the entire property of the offenders is forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
+    "license": "46220923248993739422",
+    "fingerprint": "YFJRvIOW2YmaE5AhjJfqKInb8fIOhmssDR9IwjTY9kk=",
+    "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved."
   },
   "author": {
     "name": "Quinn A Michaels",
@@ -33,7 +28,7 @@
       "url": "https://patreon.com/rahulaclub"
     }
   ],
-  "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
+  "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved.",
   "description": "The Vector Deva.",
   "main": "index.js",
   "type": "module",
@@ -53,6 +48,7 @@
     "Deva.cloud",
     "Deva.world",
     "Quinn A Michaels",
+    "Quinn Michaels",
     "Inside The Net, Inc.",
     "Throwing Pigment™",
     "bleuBrain"
@@ -62,7 +58,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.29.1"
+    "@indra.ai/deva": "^1.29.2"
   },
   "data": {
     "agent": {
@@ -86,8 +82,9 @@
         }
       },
       "profile": {
+        "id": "36323544974099636015",
         "name": "Vector Deva",
-        "hashtag": "#Vector",
+        "hashtag": "#VectorDeva",
         "title": "Vector Deva",
         "subtitle": "Vector Deva for the VectorGuardWall.",
         "describe": "The Vector Deva",
@@ -97,7 +94,7 @@
         "gender": "DEVA",
         "voice": "ash",
         "style": "A Cyber Security Vector.",
-        "system": "Deva.world.vector",
+        "system": "Indra.ai.vector",
         "layout": "default",
         "emoji": "/devas/vector/emoji.png",
         "avatar": "/devas/vector/avatar.png",
@@ -106,8 +103,9 @@
         "creator": "Quinn A Michaels",
         "owner": "Quinn A Michaels",
         "warning": "⚠️ These eight qualities glorify a man wisdom, high birth, self-restraint, learning, prowess, moderation in speech, gift according to one's power, and gratitude. This house hath nine doors, three pillars, and five witnesses. It is presided over by the soul. That learned man who knoweth all this is truly wise. He who never boastfully striveth to attain the three objects of human pursuit, who when asked, telleth the truth, who quarreleth not even for the sake of friends, and who never becometh angry though slighted, is reckoned as wise. The intelligent man who relinquisheth pride, folly, insolence, sinful acts, disloyalty, crookedness of behaviour, enmity with many, and also quarrels with men that are drunk, mad and wicked, is the foremost of his species. ",
-        "copyright": "Copyright ©2025 Quinn A Michaels. All rights reserved.",
-        "created": "Friday, August 29, 2025 - 4:47:05 PM"
+        "copyright": "Copyright ©2000-2025 Quinn A Michaels. All rights reserved.",
+        "created": "Friday, August 29, 2025 - 4:47:05 PM",
+        "updated": "Wednesday, November 26, 2025 - 5:19:37 PM"
       }
     },
     "vars": {

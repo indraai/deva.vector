@@ -5,18 +5,18 @@
 // Vector  Deva test file
 
 const {expect} = require('chai')
-const vector = require('./index.js');
+const VectorDeva = require('./index.js');
 
-describe(indra.me.name, () => {
+describe(VectorDeva.me.name, () => {
   beforeEach(() => {
-    return vector.init()
+    return VectorDeva.init()
   });
   it('Check the DEVA Object', () => {
-    expect(vector).to.be.an('object');
-    expect(vector).to.have.property('agent');
-    expect(vector).to.have.property('vars');
-    expect(vector).to.have.property('listeners');
-    expect(vector).to.have.property('methods');
-    expect(vector).to.have.property('modules');
+    expect(VectorDeva).to.be.an('object');
+    expect(VectorDeva).to.have.property('agent');
+    expect(VectorDeva).to.have.property('vars');
+    expect(VectorDeva).to.have.property('listeners');
+    expect(VectorDeva).to.have.property('methods');
+    expect(VectorDeva).to.have.property('modules');
   });
 })

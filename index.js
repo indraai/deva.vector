@@ -1,7 +1,9 @@
 "use strict";
 // ©2025 Quinn A Michaels; All rights reserved. 
 // Legal Signature Required For Lawful Use.
-// Distributed under VLA:38376038300534627638 LICENSE.md
+// Distributed under VLA:68835997272564084323 LICENSE.md
+// Wednesday, November 26, 2025 - 5:19:37 PM
+
 // Vector Deva
 
 import Deva from '@indra.ai/deva';
@@ -28,7 +30,7 @@ const info = {
   copyright: pkg.copyright
 };
 
-const VECTOR = new Deva({
+const VectorDeva = new Deva({
   info,
   agent,
   vars,
@@ -49,7 +51,7 @@ const VECTOR = new Deva({
     // return this.start if license_check passes otherwise stop.
     return license_check ? this.start(data, resolve) : this.stop(data, resolve);
   },  
-  onReady(data, resolve) {
+  async onReady(data, resolve) {
     const {VLA} = this.info();
     this.prompt(`${this.vars.messages.ready} > VLA:${VLA.uid}`);
     return resolve(data);    
@@ -60,5 +62,5 @@ const VECTOR = new Deva({
     return reject(err);
   },
 });
-export default VECTOR
+export default VectorDeva
 

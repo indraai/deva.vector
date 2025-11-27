@@ -1,11 +1,14 @@
 // ©2025 Quinn A Michaels; All rights reserved. 
 // Legal Signature Required For Lawful Use.
-// Distributed under VLA:38376038300534627638 LICENSE.md
+// Distributed under VLA:68835997272564084323 LICENSE.md
+// Wednesday, November 26, 2025 - 5:19:37 PM
 
 ::BEGIN:MAIN
-# {{agent.name}}
+# {{profile.name}}
 
 {{profile}}
 
-copyright: ©2025 Quinn Michaels
+talk: #vector help main:license
+
+copyright: {{profile.copyright}}
 ::END:MAIN
