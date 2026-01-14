@@ -1,10 +1,9 @@
 "use strict";
-// ©2025 Quinn A Michaels; All rights reserved. 
-// Legal Signature Required For Lawful Use.
-// Distributed under VLA:68835997272564084323 LICENSE.md
-// Wednesday, November 26, 2025 - 5:19:37 PM
-
 // Vector Deva
+// Copyright ©2000-2026 Quinn A Michaels; All rights reserved. 
+// Legal Signature Required For Lawful Use.
+// Distributed under VLA:31941953695116752336 LICENSE.md
+// Wednesday, January 14, 2026 - 8:46:11 AM
 
 import Deva from '@indra.ai/deva';
 import pkg from './package.json' with {type:'json'};
