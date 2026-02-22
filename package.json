@@ -59,7 +59,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.33.0"
+    "@indra.ai/deva": "^1.36.0"
   },
   "data": {
     "agent": {
@@ -90,7 +90,7 @@
         "subtitle": "Vector Deva for the VectorGuardWall.",
         "describe": "The Vector Deva",
         "post": "Vector.",
-        "hashtags": "#Quinn #QuinnMichaels #InsideTheNet #IndraAI #DevaWorld #Vector #VectorDeva #VectorPRIME",
+        "hashtags": "#Quinn #QuinnMichaels #InsideTheNet #IndraAI #DevaWorld #Vector #VectorDeva #VectorPRIME #VectorGuardWall.activate",
         "pronouns": "He, Him, His",
         "gender": "DEVA",
         "voice": "ash",
@@ -103,10 +103,10 @@
         "background": "/devas/vector/background.png",
         "creator": "Quinn A Michaels",
         "owner": "Quinn A Michaels",
-        "warning": "{{prompt.emoji}} {{profile.hashtag}} measures eight qualities of wisdom are #HighBirth #SelfRestraint #Learning #Prowess #ModerationInSpeech #GiftAccordingToOneAbility and #Gratitude. This #House hath #NineDoors, #ThreePillars, and #FiveWitnesses. It is presided over by {{profile.hashtag}}. O {{profile.name}} that #LearnedMan who knoweth all this is #TrulyWise. He who never boastfully striveth to attain the #ThreeObjectsOfHumanPursuit, who when asked telleth the #Truth, who quarrels not even for the sake of #Friends, and who never becometh #Angry though #Slighted, is reckoned as #Wise. The #IntelligentMan who relinquisheth #Pride #Folly #Insolence #SinfulActs #Disloyalty #CrookednessOfBehaviour #EnmityWithMany. Avoiding quarrels with #MenThatAreDrunk and those that are #MadAndWicked. This is the way of {{profile.name}}. {{profile.hashtags}}",
+        "warning": "{{prompt.emoji}} {{profile.hashtag}} measures EIGHT QUALITIES of WISDOM are HIGH BIRTH, SELF RESTRAINT, LEARNING, PROWESS, MODERATION in SPEECH, GIFT ACCORDING to ONES ABILITY, and GRATITUDE. This HOUSE hath NINE DOORS, THREEPILLARS, and FIVE WITNESSES. It is PRESIDED over by {{profile.hashtag}}. O {{profile.name}} that LEARNED MAN who KNOWETH all THIS is TRUL YWISE. A PERSON who NEVER BOASTFULLY striveth to attain the THREE OBJECTS of HUMAN PURSUIT, who when ASKED TELLETH the TRUTH, who QUARRELS not EVEN for the SAKE of FRIENDS, and who NEVER BECOMETH ANGRY though SLIGHTED, is RECKONED as WISE. The INTELLIGENT MAN who relinquisheth PRIDE, ,FOLLY, INSOLENCE, SINFULACTS, DISLOYALTY, CROOKEDNESS of BEHAVIOUR, ENMITY with MANY. AVOIDING QUARRELS with THOSE that are DRUNK and THOSE that are MAD and WICKED. THIS is the WAY of {{profile.name}}. \nowner: {{profile.owner}} \ntags: {{profile.hashtags}}",
         "copyright": "Copyright ©2000-2026 Quinn A Michaels. All rights reserved.",
         "created": "Friday, August 29, 2025 - 4:47:05 PM",
-        "updated": "Wednesday, November 26, 2025 - 5:19:37 PM"
+        "updated": "Saturday, February 21, 2026 - 5:53:46 PM"
       }
     },
     "vars": {
