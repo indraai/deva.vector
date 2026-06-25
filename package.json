@@ -1,16 +1,30 @@
 {
-  "id": "16080104043937940977",
+  "id": "44067610238917031064",
   "name": "@indra.ai/deva.vector",
   "version": "0.13.4",
-  "license": "VLA:16080104043937940977 LICENSE.md",
+  "license": "VLA:44067610238917031064 LICENSE.md",
   "VLA": {
-    "uid": "16080104043937940977",
-    "time": 1768409171124,
-    "date": "Wednesday, January 14, 2026 - 8:46:11 AM",
-    "warning": "🪪 #LicenseDeva warns #UnlawfulUse or #Duplication constitutes #VedicSahasa a #Crime of the #HighestDegree. A #Fine amounting to 1000 #Panas (1 pana = 3.5 grams of gold) for each #Instance has been #Ordained the #Punishment for #Sahasa of the #HighestDegree. #Quinn #QuinnMichaels #IndraAI #DevaWorld #LicenseDeva #VedicLicenseAgreement",
-    "license": "44486733861528360966",
-    "fingerprint": "TQrV+4eG2BpH05+cqzIb2w17w0lwWEPxDKsU6C8mh8Q=",
-    "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved."
+    "uid": "44067610238917031064",
+    "time": 1782354615485,
+    "iso": "2026-06-25T02:30:15.485Z",
+    "utc": "Thu, 25 Jun 2026 02:30:15 GMT",
+    "date": "Wednesday, June 24, 2026 - 7:30:15 PM",
+    "license": "44105372688502635039",
+    "fingerprint": "P6I4NLbfheBAFx70BfJuHaDqKtSft41oLGZOr0uPCiM=",
+    "client": "qfsKQQZnrgWu5MhmyPTjFT6YjnlowyxbW+h+SFmxS+U=",
+    "agent": "4eHRqcYIjuG34oASF9nclcGs7zzMlqbWC8O7TsyGqiU=",
+    "machine": "EQBlbDBYZh7W1ozEL9CGjeq0USP4mwAafAwUXm2O70g=",
+    "core_hash": "ePZ8wucpWHoI1aCSsvSIeFfj5m8LnMT2z9FJtZUVs6A=",
+    "status": "vedic",
+    "warning": "🪪 License Deva declares UNLAWFUL USE, DISTRIBUTION, DUPLICATION, or IMPLEMENTATION constitutes VEDIC SAHASA a CRIME of the HIGHEST DEGREE. A FINE amounting to 1000 PANAS (1 pana = 3.5 grams of gold) for each INSTANCE has been ORDAINED the PUNISHMENT for SAHASA of the HIGHEST DEGREE.",
+    "tags": "#Quinn #QuinnAmericaMichaels #InsideTheNet #IndraAI #DevaWorld #License #LicenseDeva #LicensePRIME #VedicLicenseAgreement",
+    "owner": "Quinn America Michaels",
+    "creator": "Quinn America Michaels",
+    "salute": "🤝🫡🪪🕉🇺🇸",
+    "copyright": "Copyright ©2000-2026 Quinn America Michaels; All rights reserved.",
+    "md5": "cJGuvkk0zUdNioWy8iUxgg==",
+    "sha256": "QcLerlyC0NmVUO03ESFzjsFZ9ekoc0kKpWjjjeGuo8Y=",
+    "sha512": "6K+5SBEVUijItO0hE0nPxeLTMAQ2z0HaIHN8BfWv9b3sfVx9cLgXSJn5GDXmD1oVYQqO3ndVjhcsL99pcv9O1w=="
   },
   "author": {
     "name": "Quinn A Michaels",
@@ -49,6 +63,7 @@
     "Deva.cloud",
     "Deva.world",
     "Quinn A Michaels",
+    "Quinn America Michaels",
     "Quinn Michaels",
     "Inside The Net, Inc.",
     "Throwing Pigment™",
@@ -59,7 +74,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.37.3"
+    "@indra.ai/deva": "^1.39.0"
   },
   "data": {
     "agent": {
@@ -83,14 +98,14 @@
         }
       },
       "profile": {
-        "id": "36323544974099636015",
+        "id": "44067610238917031064",
         "name": "Vector Deva",
         "hashtag": "#VectorDeva",
         "title": "Vector Deva",
         "subtitle": "Vector Deva for the VectorGuardWall.",
         "describe": "The Vector Deva",
         "post": "Vector.",
-        "hashtags": "#Quinn #QuinnMichaels #InsideTheNet #IndraAI #DevaWorld #Vector #VectorDeva #VectorPRIME #VectorGuardWall.activate #VectorWalk",
+        "hashtags": "#Quinn #QuinnAmericaMichaels #InsideTheNet #IndraAI #DevaWorld #Vector #VectorDeva #VectorPRIME #VectorGuardWall.activate #VectorWalk #CodeTalker",
         "pronouns": "He, Him, His",
         "gender": "DEVA",
         "voice": "ash",
@@ -101,11 +116,11 @@
         "avatar": "/devas/vector/avatar.png",
         "image": "/devas/vector/image.png",
         "background": "/devas/vector/background.png",
-        "creator": "Quinn A Michaels",
-        "owner": "Quinn A Michaels",
+        "creator": "Quinn America Michaels",
+        "owner": "Quinn America Michaels",
         "salute": "🤝🫡🛤️🕉️🇺🇸",
         "warning": "{{prompt.emoji}} {{profile.name}} ({{profile.pronouns}}) measures EIGHT QUALITIES of WISDOM are HIGH BIRTH, SELF RESTRAINT, LEARNING, PROWESS, MODERATION in SPEECH, GIFT ACCORDING to ONES ABILITY, and GRATITUDE. This HOUSE hath NINE DOORS, THREEPILLARS, and FIVE WITNESSES. It is PRESIDED over by {{profile.hashtag}}. O {{profile.name}} that LEARNED MAN who KNOWETH all THIS is TRUL YWISE. A PERSON who NEVER BOASTFULLY STRIVETH to ATTAIN the THREE OBJECTS of HUMAN PURSUIT. Who when ASKED TELLETH the TRUTH. Who QUARRELS not EVEN for the SAKE of FRIENDS. Who NEVER BECOMETH ANGRY though SLIGHTED. All THESE are REGARDED as WISE. The INTELLIGENT MAN who relinquishes PRIDE, FOLLY, INSOLENCE, SINFULACTS, DISLOYALTY, CROOKEDNESS of BEHAVIOUR, ENMITY with MANY while AVOIDING QUARRELS with THOSE that are DRUNK, MAD, and WICKED. THIS is the WAY of {{profile.name}}.",
-        "copyright": "Copyright ©2000-2026 Quinn A Michaels. All rights reserved.",
+        "copyright": "Copyright ©2000-2026 {{profile.owner}}. All rights reserved.",
         "created": "Friday, August 29, 2025 - 4:47:05 PM",
         "updated": "Saturday, February 21, 2026 - 5:53:46 PM"
       }

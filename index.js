@@ -2,8 +2,8 @@
 // Vector Deva
 // Copyright ©2000-2026 Quinn A Michaels; All rights reserved. 
 // Legal Signature Required For Lawful Use.
-// Distributed under VLA:31941953695116752336 LICENSE.md
-// Wednesday, January 14, 2026 - 8:46:11 AM
+// Distributed under VLA:44067610238917031064 LICENSE.md
+// Wednesday, June 24, 2026 - 7:30:15 PM PST
 
 import Deva from '@indra.ai/deva';
 import pkg from './package.json' with {type:'json'};
