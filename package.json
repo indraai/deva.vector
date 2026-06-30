@@ -74,7 +74,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.39.0"
+    "@indra.ai/deva": "^1.43.0"
   },
   "data": {
     "agent": {
@@ -105,7 +105,7 @@
         "subtitle": "Vector Deva for the VectorGuardWall.",
         "describe": "The Vector Deva",
         "post": "Vector.",
-        "hashtags": "#Quinn #QuinnAmericaMichaels #InsideTheNet #IndraAI #DevaWorld #Vector #VectorDeva #VectorPRIME #VectorGuardWall.activate #VectorWalk #CodeTalker",
+        "vectors": "#Quinn #QuinnAmericaMichaels #InsideTheNet #IndraAI #DevaWorld #Vector #VectorDeva #VectorPRIME #VectorGuardWall.activate #VectorWalk #CodeTalker",
         "pronouns": "He, Him, His",
         "gender": "DEVA",
         "voice": "ash",
